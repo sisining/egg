@@ -1,0 +1,31 @@
+{
+  "name": "cli-highlight",
+  "version": "2.1.8",
+  "description": "Syntax highlighting in your terminal",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "bin": {
+    "highlight": "bin/highlight"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "npm run eslint && npm run prettier",
+    "eslint": "eslint 'src/**/*.ts'",
+    "prettier": "prettier --write --list-different '**/{*.ts,*.json,.prettierrc}'",
+    "build": "tsc -p .",
+    "watch": "ts"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
